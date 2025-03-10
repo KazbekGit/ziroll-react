@@ -1,0 +1,29 @@
+.wrapper {
+    background-color: #3c804b;
+    padding: 20px;
+}
+
+.offers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 0 100px;
+}
+
+.offers div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 4px;
+    background-color: #313a33;
+    color: antiquewhite;
+
+    font-size: 20pt
+}
