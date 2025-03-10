@@ -17,13 +17,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     width: 300px;
     height: 300px;
-
+    
     border-radius: 4px;
-    background-color: #313a33;
+    border-top: 2px solid white;
+    border-bottom: 5px solid white;
+    
     color: antiquewhite;
-
+    background-color: #313a33;
+    box-shadow: 2px 0px 2px rgb(34, 37, 30);
+    
     font-size: 20pt
+}
+
+
+.offers div:hover {
+    box-shadow: 8px 4px 5px 0px rgba(40, 43, 36, 0.918);
+    cursor: pointer;
 }
