@@ -1,39 +1,40 @@
 .wrapper {
-    background-color: #3c804b;
-    padding: 20px;
+  background-color: #3c804b;
+  padding: 40px;
+
+  background-image: url("/textures/confetti_texture.svg"); 
+
+  min-height: 600px;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+
+  border-bottom: 2px solid rgb(95, 95, 95);
+  border-top: 2px solid rgb(87, 87, 87);
 }
 
 .offers {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 
-    padding: 0 100px;
+  padding: 30px 100px;
+  opacity: .7;
 }
 
-.offers div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: 300px;
-    height: 300px;
-    
-    border-radius: 4px;
-    border-top: 2px solid white;
-    border-bottom: 5px solid white;
-    
-    color: antiquewhite;
-    background-color: #313a33;
-    box-shadow: 2px 0px 2px rgb(34, 37, 30);
-    
-    font-size: 20pt
+.offers {
+
+  border-radius: 4px;
+  border-top: 2px solid white;
+  border-bottom: 5px solid white;
+  border-left: 1px solid rgba(252, 252, 252, 0.425);
+
+  color: antiquewhite;
+  background-color: #60ca77;
+  box-shadow: 2px 0px 2px rgb(34, 37, 30);
+
 }
 
 
-.offers div:hover {
-    box-shadow: 8px 4px 5px 0px rgba(40, 43, 36, 0.918);
-    cursor: pointer;
-}
