@@ -40,12 +40,5 @@ export default [
     title: "accusamus ea aliquid et amet sequi nemo",
     url: "https://unsplash.com/photos/an-aerial-view-of-a-beach-at-sunset-LYFkdAMB0ig",
     thumbnailUrl: "https://dummyjson.com/image/100x100",
-  },
-  {
-    albumId: 1,
-    id: 7,
-    title: "officia delectus consequatur vero aut veniam explicabo molestias",
-    url: "https://unsplash.com/photos/the-reflection-of-a-building-in-the-glass-_R57kxvY86c",
-    thumbnailUrl: "https://dummyjson.com/image/100x100",
-  },
+  }
 ];

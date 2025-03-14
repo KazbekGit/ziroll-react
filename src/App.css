@@ -12,6 +12,12 @@
   gap: 20px;
 
   box-sizing: border-box;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+.inter {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

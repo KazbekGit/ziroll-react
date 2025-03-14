@@ -1,4 +1,8 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  
   background-color: #3c804b;
   padding: 40px;
 
