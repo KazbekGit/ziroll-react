@@ -51,6 +51,7 @@
 
 .ingredientsList {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 
   padding: 20px 40px;
