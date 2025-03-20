@@ -2,27 +2,28 @@ import React, { useState } from "react";
 import style from "./TestComponent.module.css";
 
 const TestComponent = () => {
+  const [image, setImage] = useState({});
 
-  const [images, setImages] = useState([])
-
-  const fetchData = (e) => {
-    e.preventDefault(); // Предотвращаем стандартную отправку формы
-    fetch("https://api.nekosia.cat/api/v1/images/catgirl", {
+  const fetchData = async () => {
+    const res = await fetch("https://api.nekosia.cat/api/v1/images/catgirl", {
       method: "GET", // Меняем на GET, так как это запрос данных
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`Ошибка: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => setImages(data))
-      .catch((err) => console.error(err));
+    });
+
+    if (!res.ok) {
+      throw new Error(`Ошибка: ${res.status}`);
+    }
+
+    console.log(res);
+
+    const data = await res.json();
+    console.log(data);
+    console.log(data.image.original.url);
+    setImage(data)
   };
 
   return (
     <div className={style.wrapper}>
-      <form method="post" onSubmit={fetchData}>
+      <form action={fetchData}>
         <button
           style={{
             width: "100px",
@@ -34,6 +35,7 @@ const TestComponent = () => {
           Get cat's
         </button>
       </form>
+      <div>{image.original.url ? <img src={image.image.original.url} alt="Cat" /> : null}</div>
     </div>
   );
 };
