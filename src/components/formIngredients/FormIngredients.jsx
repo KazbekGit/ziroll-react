@@ -2,27 +2,21 @@ import React, { useState } from "react";
 import style from "./FormIngredients.module.css";
 
 const FormIngredients = () => {
-  const [ingredientsValue, setIngredientsValue] = useState("");
   const [ingredientsList, setIngredientsList] = useState([]);
 
-  const handleIngredients = (event) => {
-    setIngredientsValue(event.target.value);
-  };
-
-  const formSubmit = (event) => {
-    event.preventDefault();
-
-    if (ingredientsValue && ingredientsValue.trim()) {
+  const formSubmit = (formData) => {
+    const ingredients = formData.get("ingredients");
+    if (ingredients) {
+      console.log("in formS");
       setIngredientsList((prev) => [
         ...new Set([
           ...prev,
-          ...ingredientsValue
+          ...ingredients
             .split(/[,;\s]+/)
             .map((item) => item.trim().toLowerCase())
-            .filter(Boolean),
+            .filter(Boolean)
         ]),
       ]);
-      setIngredientsValue("");
     }
   };
 
@@ -32,7 +26,7 @@ const FormIngredients = () => {
 
   return (
     <>
-      <form className={style.ingredients} onSubmit={formSubmit}>
+      <form className={style.ingredients} action={formSubmit}>
         <h3>Ingredients</h3>
         <div>
           <input
@@ -40,8 +34,6 @@ const FormIngredients = () => {
             aria-label="ingredients"
             placeholder="e.g. apple, banana; orange pear"
             name="ingredients"
-            value={ingredientsValue}
-            onChange={handleIngredients}
           />
           <button>add ingredients</button>
         </div>
